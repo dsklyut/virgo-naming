@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0.BUILD-SNAPSHOT
+Bundle-Name: Clean up system properties after catalina for naming support
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.dsklyut.virgo.osgi.javanaming.system.property.cleanup
+Bundle-Activator: com.dsklyut.virgo.osgi.javanaming.cleanup.internal.Activator
+Import-Template: org.osgi.*;version="0",
+ javax.naming.*;version="0",
+ org.slf4j.*;version="[1.6.1,2.0.0)"
+Excluded-Exports: *.internal.*

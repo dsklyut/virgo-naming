@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+
+
+    <jee:jndi-lookup id="simple" jndi-name="resource" resource-ref="true" />
+    <jee:jndi-lookup id="full" jndi-name="java:com/env/resource" resource-ref="true" />
+    <jee:jndi-lookup id="simpleFqn" jndi-name="org.springframework.core.io.Resource" resource-ref="true" />
+    <jee:jndi-lookup id="fullFqn" jndi-name="java:com/env/org.springframework.core.io.Resource" resource-ref="true" />
+
+    <jee:jndi-lookup id="osgiFqn" jndi-name="osgi:service/org.springframework.core.io.Resource"/>
+    <jee:jndi-lookup id="osgiFilter" jndi-name="osgi:service/resource"/>
+
+
+    <bean id="validator" class="com.dsklyut.virgo.osgi.javanaming.bridge.test.bundle.Validator">
+        <property name="simple" ref="simple"/>
+        <property name="full" ref="full"/>
+        <property name="fullFqn" ref="fullFqn"/>
+        <property name="simpleFqn" ref="simpleFqn"/>
+
+        <property name="osgiFqn" ref="osgiFqn"/>
+        <property name="osgiFilter" ref="osgiFilter"/>
+    </bean>
+</beans>

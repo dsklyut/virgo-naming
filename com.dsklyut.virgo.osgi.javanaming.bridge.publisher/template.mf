@@ -1,0 +1,6 @@
+Bundle-ManifestVersion: 2
+Bundle-Name: Java Naming on Virgo with Gemini Naming support
+Bundle-SymbolicName: com.dsklyut.virgo.osgi.javanaming.bridge.publisher
+Bundle-Version: 1.0.0.BUILD-SNAPSHOT
+Exclude-Imports: org.springframework.*
+Import-Library: org.springframework.spring;version="[3, 4)"

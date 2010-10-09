@@ -1,0 +1,10 @@
+Bundle-ManifestVersion: 2
+Bundle-Name: Java Naming on Virgo with Gemini Naming support
+Bundle-SymbolicName: com.dsklyut.virgo.osgi.javanaming.bridge
+Bundle-Version: 1.0.0.BUILD-SNAPSHOT
+Import-Template: org.osgi.framework.*;version="0",
+ javax.naming.*;version="0",
+ org.osgi.service.jndi.*;version="0"
+Bundle-Activator: com.dsklyut.virgo.osgi.javanaming.bridge.internal.Activator
+Excluded-Exports: *.internal.*,javax.*,org.apache.naming.*
+Excluded-Imports: org.apache.naming.java.*
