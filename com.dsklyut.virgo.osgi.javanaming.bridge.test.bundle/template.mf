@@ -3,5 +3,5 @@ Bundle-Name: Java Naming on Virgo with Gemini Naming support
 Bundle-SymbolicName: com.dsklyut.virgo.osgi.javanaming.bridge.test.bundle
 Bundle-Version: 1.0.0.BUILD-SNAPSHOT
 Import-Template: org.slf4j;version="1.6.1"
-Exclude-Imports: org.springframework.*
+Excluded-Imports: org.springframework.*
 Import-Library: org.springframework.spring;version="[3, 4)"

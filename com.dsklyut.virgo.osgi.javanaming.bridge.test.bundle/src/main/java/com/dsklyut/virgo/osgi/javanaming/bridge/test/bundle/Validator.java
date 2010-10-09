@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
  * Date: Oct 8, 2010
  * Time: 1:57:48 PM
  */
-public class Validator {
+public class Validator implements org.springframework.beans.factory.InitializingBean {
 
     private final Logger logger = LoggerFactory.getLogger(Validator.class);
 
@@ -54,7 +54,7 @@ public class Validator {
         this.fullFqn = fullFqn;
     }
 
-    @PostConstruct
+	@Override
     public void afterPropertiesSet() throws Exception {
 
         boolean result = validate("simple", this.simple);
@@ -70,9 +70,11 @@ public class Validator {
     private boolean validate(String name, Object obj) {
         if (this.simple == null) {
             logger.error("{} is null", name);
+			System.err.println(String.format("%s is null", name ));
             return true;
         }
-        logger.error("{} was set and is type of {} and toString {}", new Object[]{name, simple.getClass(), simple.toString()});
+        logger.error("{} was set and is type of {} and toString {}", new Object[]{name, obj.getClass(), obj.toString()});
+		System.err.println(String.format("%s was set and is type of %s and toString %s", name, obj.getClass().toString(), obj.toString()));
         return false;
     }
 
