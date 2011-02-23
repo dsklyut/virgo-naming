@@ -11,13 +11,4 @@
     <groupId>com.dsklyut.virgo</groupId>
     <artifactId>com.dsklyut.virgo.osgi.javanaming.bridge</artifactId>
 
-
-    <dependencies>
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>com.springsource.org.junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>

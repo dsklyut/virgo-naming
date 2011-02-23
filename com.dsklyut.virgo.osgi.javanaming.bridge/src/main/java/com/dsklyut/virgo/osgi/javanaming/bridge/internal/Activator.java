@@ -1,14 +1,11 @@
 package com.dsklyut.virgo.osgi.javanaming.bridge.internal;
 
-import javax.naming.spi.InitialContextFactory;
-import javax.naming.spi.InitialContextFactoryBuilder;
-import javax.naming.spi.ObjectFactory;
-
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.jndi.JNDIConstants;
 
+import javax.naming.spi.ObjectFactory;
 import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;

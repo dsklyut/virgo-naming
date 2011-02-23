@@ -16,7 +16,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>org.springframework.spring-library</artifactId>
             <type>libd</type>
-            <version>3.0.4.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
